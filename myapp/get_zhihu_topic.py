@@ -85,7 +85,7 @@ class GetZhihuTopic(Component):
             response = get_daily_hot_list(url=url, record_count=form_data['record_count'])
             result_json = {
                 "result": True,
-                "data": response,
+                "data": response['data'],
                 "message": u"第三方接口调用成功",
                 }
         except Exception as e:
